@@ -66,3 +66,10 @@ pip3 install boto boto3`
 - `ping 3.250.74.39`
 14. ssh to instances
 - find the ssh command in aws
+
+### Configuration of APP and DB instances
+1. First we have to copy the app folder to our app instance
+-`scp -i ~/.ssh/eng84devops.pem -r app/ ubuntu@34.244.88.132:~/. `
+2. Go back to the controller instnace and create the playbook for the app instance
+3. Run the app playbook `sudo ansible-playbook app_config.yml`
+4. 
