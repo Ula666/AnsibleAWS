@@ -76,7 +76,9 @@ pip3 install boto boto3`
 2. Go back to the controller instnace and create the playbook for the app instance
 3. Copy the provision file `scp -i ~/.ssh/eng84devops.pem -r provision.sh ubuntu@34.244.88.132:~/.`
 4. Run the app playbook `sudo ansible-playbook app_config.yml`
-5. To check if the app is working correctly `http://appip:3000/`
-6. Create a playbook for the Database Instnace `sudo nano db_config.yml`
-7. Run the db playbook `sudo ansible-playbook db_config.yml`
-8. 
+5. To check if the app is working correctly: 
+ - Run ` sudo ansible app -m shell -a "cd app && node app.js"` in the Controller instance and enter`http://appip:3000/` in the web browser. 
+7. Create a playbook for the Database Instnace `sudo nano db_config.yml`
+8. Run the db playbook `sudo ansible-playbook db_config.yml`
+9. 
+
