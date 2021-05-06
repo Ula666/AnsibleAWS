@@ -1,0 +1,12 @@
+---
+- hosts: app 
+  gather_facts: yes
+  become: true
+
+  tasks: 
+  - name: Install nginx  
+    apt: pkg=nginx state=present
+
+  - name: Install PythonSoftwareProperties 
+    apt: pkg=python-software-properties state=present 
+
