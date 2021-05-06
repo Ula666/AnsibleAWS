@@ -72,6 +72,7 @@ pip3 install boto boto3`
 -`scp -i ~/.ssh/eng84devops.pem -r app/ ubuntu@34.244.88.132:~/. `
 2. Go back to the controller instnace and create the playbook for the app instance
 3. Run the app playbook `sudo ansible-playbook app_config.yml`
-4. Create a playbook for the Database Instnace `sudo nano db_config.yml`
-5. Run the db playbook `sudo ansible-playbook db_config.yml`
-6. 
+4. To check if the app is working correctly `http://appip:3000/`
+5. Create a playbook for the Database Instnace `sudo nano db_config.yml`
+6. Run the db playbook `sudo ansible-playbook db_config.yml`
+7. 
