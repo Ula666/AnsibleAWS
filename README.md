@@ -55,6 +55,7 @@ pip3 install boto boto3`
 10. Run the playbook
 - ` sudo ansible-playbook playbook.yml --ask-vault-pass` and enter the password
 11. Run the playbook again and create instances:
+- Make sure to change the IDs of instances before creating
 - `sudo ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2 `
 12. Add information about our new instances to hosts file:
 - `[app]`
