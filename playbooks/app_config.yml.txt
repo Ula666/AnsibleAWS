@@ -10,3 +10,29 @@
   - name: Install PythonSoftwareProperties 
     apt: pkg=python-software-properties state=present 
 
+  - name: run provision.sh script 
+    shell: 
+      cmd: bash /home/ubuntu/provision.sh  
+
+  - name: Downloading Nodejs-6.x 
+    get_url:  
+       url: https://deb.nodesource.com/setup_6.x
+       dest: /home/ubuntu/nodejs6.sh 
+
+  - name: Preparing nodejs version 
+    shell: 
+      cmd: bash /home/ubuntu/nodejs6.sh  
+
+  - name: Installing nodejs in app server
+    shell:
+      cmd: sudo apt-get install nodejs -y 
+
+  - name: Installing pm2 
+    shell: 
+      cmd: npm install -g pm2 
+
+  - name: Restarting service NginX
+    service:
+      name: nginx 
+      state: restarted 
+      enabled: yes
