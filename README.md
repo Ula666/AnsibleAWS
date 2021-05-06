@@ -62,4 +62,6 @@ pip3 install boto boto3`
 - `[db]`
 - `3.250.109.4 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/eng84devops.pem`
 13. ping
+- `ping 3.250.74.39`
 14. ssh to instances
+- find the ssh command in aws
