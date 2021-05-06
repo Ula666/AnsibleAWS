@@ -1,5 +1,8 @@
 # AnsibleAWS
 
+- ![image](https://user-images.githubusercontent.com/47173937/117334418-e3300c80-ae91-11eb-84ab-82e6b925ee9c.png)
+
+
 ### Task: ansible to creating ec2 instances with playbooks using Ansible-vault to secure the aws keys
 1. First we have to create an EC2 instance on AWS called Controller.
 2. SSH to this instance using SSH command and .pem file
