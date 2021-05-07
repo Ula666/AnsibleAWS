@@ -7,12 +7,12 @@
 1. First we have to create an EC2 instance on AWS called Controller.
 2. SSH to this instance using SSH command and .pem file
 3. Install the required dependecies:
-- `sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible -y
-sudo apt install python3-pip -y
-pip3 install awscli
-pip3 install boto boto3`
-- then update and upgrade
+- `sudo apt-add-repository --yes --update ppa:ansible/ansible`
+- `sudo apt install ansible -y`
+- `sudo apt install python3-pip -y`
+- `pip3 install awscli`
+- `pip3 install boto boto3`
+- `sudo apt-get update && apt-get upgrade`
 
 4. Create a new ssh key, or securly copy the one you used to ssh to this instance
 - `scp -i ~/.ssh/eng84devops.pem -r eng84devops.pem ubuntu@public_ip_controller:~/.ssh/` to copy a file
